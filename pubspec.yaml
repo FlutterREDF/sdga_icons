@@ -1,0 +1,65 @@
+name: sdga_icons
+description: Implementation of SDGA Icons for Flutter. More than 4000 icons in 7 styles.
+version: 0.0.2
+maintainer: OGhareeb
+homepage: https://design.dga.gov.sa/guidelines/foundation/iconography
+repository: https://github.com/oghareeb/sdga_icons
+screenshots:
+  - description: Bulk Icons
+    path: screens/screenshot_bulk.png
+  - description: Duotone Icons
+    path: screens/screenshot_duotone.png
+  - description: Twotone Icons
+    path: screens/screenshot_twotone.png
+  - description: Solid Icons
+    path: screens/screenshot_solid.png
+  - description: Stroke Icons
+    path: screens/screenshot_stroke.png
+  - description: Sharp Solid Icons
+    path: screens/screenshot_sharp_solid.png
+  - description: Sharp Stroke Icons
+    path: screens/screenshot_sharp_stroke.png
+
+environment:
+  sdk: ">=2.12.0 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+
+flutter:
+  fonts:
+    - family: SDGAIconsBulk
+      fonts:
+        - asset: lib/fonts/SDGAIconsBulk.ttf
+          weight: 400
+    - family: SDGAIconsDuotone
+      fonts:
+        - asset: lib/fonts/SDGAIconsDuotone.ttf
+          weight: 400
+    - family: SDGAIconsSharpSolid
+      fonts:
+        - asset: lib/fonts/SDGAIconsSharpSolid.ttf
+          weight: 400
+    - family: SDGAIconsSharpStroke
+      fonts:
+        - asset: lib/fonts/SDGAIconsSharpStroke.ttf
+          weight: 400
+    - family: SDGAIconsSolid
+      fonts:
+        - asset: lib/fonts/SDGAIconsSolid.ttf
+          weight: 400
+    - family: SDGAIconsStroke
+      fonts:
+        - asset: lib/fonts/SDGAIconsStroke.ttf
+          weight: 400
+    - family: SDGAIconsTwotone
+      fonts:
+        - asset: lib/fonts/SDGAIconsTwotone.ttf
+          weight: 400
