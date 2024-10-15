@@ -11,11 +11,6 @@ Each icon in the collection has 7 variants:
 * Sharp Solid
 * Sharp Stroke
 
-[![GitHub stars](https://img.shields.io/github/stars/oghareeb/sdga_icons?style=flat-square&label=Star)](https://github.com/oghareeb/sdga_icons)
-[![GitHub forks](https://img.shields.io/github/forks/oghareeb/sdga_icons?style=flat-square&label=Fork)](https://github.com/oghareeb/sdga_icons/fork)
-[![GitHub watchers](https://img.shields.io/github/watchers/oghareeb/sdga_icons?style=flat-square&label=Watch)](https://github.com/oghareeb/sdga_icons)
-[![Follow on GitHub](https://img.shields.io/github/followers/oghareeb?style=flat-square&label=Follow)](https://github.com/oghareeb)
-
 ## ScreenShots
 
 ![Screenshot Bulk](/screens/screenshot_bulk.png)
