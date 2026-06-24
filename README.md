@@ -36,7 +36,7 @@ sdga_icons: <latest_version>
 // import the package
 import 'package:sdga_icons/sdga_icons.dart';
 
-// Show the smile icon in it's bulk variant.
+// Show the smile icon in its bulk variant.
 SDGAIcon(
   SDGAIconsBulk.smile,
   semanticLabel: 'Smile',
@@ -55,14 +55,13 @@ Choose the desired icon variant by using one of these classes:
 
 
 ### Flutter `Icon` Widget
-You can also use the native flutter `Icon()` widget passing any `SDGAIcons` value
+You can also use the native flutter `Icon()` widget by passing the underlying `.data` property of any `SDGAIcons` value.
 
 ```dart
-Icon(SDGAIconsSolid.smile), // Smile Icon
+Icon(SDGAIconsSolid.smile.data), // Smile Icon
 ```
 
-> NOTE: Due to some limitations with the flutter `Icon` widget when you pass any **`Bulk`**, **`Duotone`** or **`Twotone`**  icon it will only render part of the icon, because these variants are splitted into 2 icons, for this case prefer to use our custom `SDGAIcon` widget that works the same as `Icon` and support these variants
-
+> NOTE: Due to some limitations with the flutter `Icon` widget when you pass any **`Bulk`**, **`Duotone`** or **`Twotone`** icon it will only render part of the icon, because these variants are split into 2 icons. For these cases, prefer to use our custom `SDGAIcon` widget that works the same as `Icon` and supports these variants natively.
 
 ## Example App
 You can see all the icons and variants within the example app.
