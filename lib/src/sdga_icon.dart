@@ -3,43 +3,52 @@ library sdga_icons;
 import 'package:flutter/material.dart';
 import 'package:sdga_icons/sdga_icons.dart';
 
+/// A custom Icon widget designed specifically for handling [SDGAIconData].
+///
+/// Automatically manages single-layer icons as well as complex dual-layer
+/// tone configurations seamlessly.
 class SDGAIcon extends Icon {
   const SDGAIcon(
-    IconData icon, {
-    Key? key,
-    double? size,
-    double? fill,
-    double? weight,
-    double? grade,
-    double? opticalSize,
-    Color? color,
-    List<Shadow>? shadows,
-    String? semanticLabel,
-    TextDirection? textDirection,
+    SDGAIconData icon, {
+    super.key,
+    super.size,
+    super.fill,
+    super.weight,
+    super.grade,
+    super.opticalSize,
+    super.color,
+    super.shadows,
+    super.semanticLabel,
+    super.textDirection,
     this.toneOpacity = 0.40,
     this.toneColor,
-  }) : super(
-          icon,
-          color: color,
-          fill: fill,
-          grade: grade,
-          key: key,
-          opticalSize: opticalSize,
-          semanticLabel: semanticLabel,
-          shadows: shadows,
-          size: size,
-          textDirection: textDirection,
-          weight: weight,
-        );
+  })  : _icon = icon,
+        // We pass null to the super constructor because Dart does not allow
+        // accessing properties of a parameter (icon.data) in a const
+        // constructor initializer. We override the 'icon' getter below instead.
+        super(null);
 
+  /// The private backend reference holding the wrapped SDGA icon data.
+  final SDGAIconData _icon;
+
+  /// The opacity applied to the secondary icon tone layer. Defaults to `0.40`.
   final double toneOpacity;
+
+  /// An optional explicit color overriding the base color for the secondary tone layer.
   final Color? toneColor;
 
   @override
+  IconData? get icon => _icon.data;
+
+  @override
   Widget build(BuildContext context) {
+    // Safely check if the underlying icon contains a tone layer due to polymorphism
     if (icon is SDGAToneIconData) {
       final toneIcon = icon as SDGAToneIconData;
+
+      // If the primary layer codePoint is empty/0x0, only render the background tone layer
       if (toneIcon.codePoint == 0x0) return _buildTone(toneIcon.tone);
+
       return Stack(
         alignment: Alignment.center,
         children: [
@@ -51,10 +60,10 @@ class SDGAIcon extends Icon {
     return super.build(context);
   }
 
-  Widget _buildTone(SDGAIconData tone) => Opacity(
+  Widget _buildTone(IconData toneData) => Opacity(
         opacity: toneOpacity,
         child: Icon(
-          tone,
+          toneData,
           key: key,
           size: size,
           fill: fill,
