@@ -1,6 +1,6 @@
 name: sdga_icons
 description: A flutter icon package that contains +4000 icons in 7 variants, used by the Saudi Digital Government Authority (SDGA).
-version: 0.1.0
+version: 0.1.1
 maintainer: OGhareeb
 homepage: https://design.dga.gov.sa/guidelines/foundation/iconography
 repository: https://github.com/FlutterREDF/sdga_icons

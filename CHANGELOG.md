@@ -1,3 +1,6 @@
+## 0.1.1
+* **Fix**: Fixed an issue where tone icons were not rendering correctly.
+
 ## 0.1.0
 * **Breaking Change**: Updated the minimum Dart SDK version requirement to `>=3.0.0`.
 * **Breaking Change**: Refactored `SDGAIconData` to encapsulate Flutter's `IconData` rather than inheriting from it, preventing issues with Flutter's final `IconData` class and ensuring type safety.

@@ -43,9 +43,7 @@ class SDGAIcon extends Icon {
   @override
   Widget build(BuildContext context) {
     // Safely check if the underlying icon contains a tone layer due to polymorphism
-    if (icon is SDGAToneIconData) {
-      final toneIcon = icon as SDGAToneIconData;
-
+    if (_icon case SDGAToneIconData toneIcon) {
       // If the primary layer codePoint is empty/0x0, only render the background tone layer
       if (toneIcon.codePoint == 0x0) return _buildTone(toneIcon.tone);
 
